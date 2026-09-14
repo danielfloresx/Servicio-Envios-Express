@@ -1,0 +1,25 @@
+/*
+    ========================================
+    SERVICIO ENVÍOS EXPRESS
+    Archivo principal CSS
+    ========================================
+*/
+
+
+
+* {
+    /* Ayuda a controlar mejor los tamaños, rellenos y bordes.*/
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+    /* Eliminar espacios adicionales que el navegador agrega 
+    automáticamente.*/
+    margin: 0;
+    padding: 0;
+
+     background-color: #f4f4f4;
+}
