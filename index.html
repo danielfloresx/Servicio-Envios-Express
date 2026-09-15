@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicio Envíos Express</title>
     <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" >
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -100,58 +101,64 @@
             </div>
 
             <!-- Contenedor que agrupa los diferentes servicios. -->
-            <div class="services-container">
+            <div class="services-container row g-4">
                 <!-- SERVICIO BÁSICO -->
-                <article class="service-card">
-                    <h3>Básico</h3>
-                    <p>
-                        Una alternativa para envíos que
-                        no requieren entrega inmediata.
-                    </p>
-                    
-                    <ul>
-                        <li>Entrega entre 3 y 5 días hábiles.</li>
-                        <li>Recomendado para urgencia baja.</li>
-                    </ul>
+                <div class="col-12 col-md-4">  
+                    <article class="service-card">
+                        <h3>Básico</h3>
+                        <p>
+                            Una alternativa para envíos que
+                            no requieren entrega inmediata.
+                        </p>
+                        
+                        <ul>
+                            <li>Entrega entre 3 y 5 días hábiles.</li>
+                            <li>Recomendado para urgencia baja.</li>
+                        </ul>
 
-                    <button class="service-button" type="button">
-                        Seleccionar
-                    </button>
-                </article>
+                        <button class="service-button" type="button">
+                            Seleccionar
+                        </button>
+                    </article>
+                </div>
 
                 <!-- SERVICIO ESTÁNDAR -->
-                <article class="service-card">
-                    <h3>Estándar</h3>
-                    <p>
-                        Una opción equilibrada entre precio y tiempo de entrega.
-                    </p>
+                <div class="col-12 col-md-4">
+                    <article class="service-card">
+                        <h3>Estándar</h3>
+                        <p>
+                            Una opción equilibrada entre precio y tiempo de entrega.
+                        </p>
 
-                    <ul>
-                        <li>Entrega entre 2 y 3 días hábiles.</li>
-                        <li>Recomendado para urgencia media.</li>
-                    </ul>
+                        <ul>
+                            <li>Entrega entre 2 y 3 días hábiles.</li>
+                            <li>Recomendado para urgencia media.</li>
+                        </ul>
 
-                    <button class="service-button" type="button">
-                        Seleccionar
-                    </button>
-                </article>
+                        <button class="service-button" type="button">
+                            Seleccionar
+                        </button>
+                    </article>
+                </div>
 
                 <!-- SERVICIO PRIORITARIO -->
-                <article class="service-card">
-                    <h3>Prioritario</h3>
-                    <p>
-                        La opción más rápida para envíos urgentes.
-                    </p>
+                <div class="col-12 col-md-4">
+                    <article class="service-card">
+                        <h3>Prioritario</h3>
+                        <p>
+                            La opción más rápida para envíos urgentes.
+                        </p>
 
-                    <ul>
-                        <li>Entrega en 1 día hábil.</li>
-                        <li>Recomendado para urgencia alta.</li>
-                    </ul>
+                        <ul>
+                            <li>Entrega en 1 día hábil.</li>
+                            <li>Recomendado para urgencia alta.</li>
+                        </ul>
 
-                    <button class="service-button" type="button">
-                        Seleccionar
-                    </button>  
-                </article>
+                        <button class="service-button" type="button">
+                            Seleccionar
+                        </button>  
+                    </article>
+                </div>
 
             </div>
 
