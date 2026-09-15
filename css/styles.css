@@ -1,30 +1,365 @@
 /*
     ========================================
     SERVICIO ENVÍOS EXPRESS
-    ARCHIVO PRINCIPAL CSS
+    Archivo principal CSS
     ========================================
 */
 
+:root {
+    --color-negro: #1f1f1f;
+    --color-negro-suave: #2b2b2b;
+    --color-amarillo: #f2c230;
+    --color-amarillo-claro: #ffe58a;
+    --color-blanco: #ffffff;
+    --color-gris-claro: #f4f4f4;
+    --color-gris: #d9d9d9;
+    --color-texto: #2c2c2c;
 
+    --radio: 12px;
+    --sombra: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- RESET ---------- */
 
 * {
     /* Ayuda a controlar mejor los tamaños, rellenos y bordes.*/
     box-sizing: border-box;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-gris-claro);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
 
-    /* Eliminar espacios adicionales que el navegador agrega 
-    automáticamente.*/
+/* ---------- HEADER ---------- */
+
+.site-header {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    padding: 18px 30px;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    color: var(--color-amarillo);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    gap: 24px;
     margin: 0;
     padding: 0;
+    list-style: none;
+}
 
+.nav-list a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    font-family: Arial, sans-serif;
+.nav-list a:hover {
+    color: var(--color-amarillo);
+}
 
-    background-color: #f5f5f5;
+/* ---------- HERO ---------- */
 
-    color: #222222;
+.hero {
+    background: linear-gradient(
+        120deg,
+        var(--color-amarillo),
+        var(--color-amarillo-claro)
+    );
+
+    padding: 70px 25px;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    color: var(--color-negro);
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: var(--color-negro-suave);
+}
+
+/* ---------- SECCIONES GENERALES ---------- */
+
+.services,
+.shipping-form-section,
+.result-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 25px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-header h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: var(--color-negro);
+}
+
+.section-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666666;
+}
+
+/* ---------- SERVICIOS ---------- */
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background-color: var(--color-blanco);
+
+    border-top: 6px solid var(--color-amarillo);
+    border-radius: var(--radio);
+
+    padding: 28px;
+
+    box-shadow: var(--sombra);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--color-negro);
+}
+
+.service-card ul {
+    padding-left: 20px;
+    min-height: 95px;
+}
+
+.service-button {
+    width: 100%;
+
+    border: 2px solid var(--color-negro);
+    border-radius: 7px;
+
+    padding: 11px;
+
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.service-button:hover {
+    background-color: var(--color-negro);
+    color: var(--color-amarillo);
+}
+
+/* ---------- FORMULARIO ---------- */
+
+.shipping-form {
+    max-width: 800px;
+    margin: 0 auto;
+
+    background-color: var(--color-blanco);
+
+    padding: 30px;
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--color-gris);
+    border-radius: 7px;
+
+    font-size: 1rem;
+    background-color: var(--color-blanco);
+}
+
+.form-group input:focus-visible,
+.form-group select:focus-visible {
+    outline: 3px solid var(--color-amarillo-claro);
+    border-color: var(--color-negro);
+}
+
+.dimensions-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* ---------- BOTONES FORMULARIO ---------- */
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 12px 22px;
+
+    border-radius: 7px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.primary-button {
+    border: 2px solid var(--color-negro);
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+}
+
+.primary-button:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+}
+
+.secondary-button {
+    border: 2px solid var(--color-negro);
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+.secondary-button:hover {
+    background-color: var(--color-gris-claro);
+}
+
+/* ---------- RESULTADO ---------- */
+
+.result-card {
+    max-width: 800px;
+    margin: 0 auto;
+
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+
+    border-left: 7px solid var(--color-amarillo);
+
+    padding: 28px;
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+}
+
+.result-card h3 {
+    margin-top: 0;
+    color: var(--color-amarillo);
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+
+    text-align: center;
+
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dimensions-group {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
 }
