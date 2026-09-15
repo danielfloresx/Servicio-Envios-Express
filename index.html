@@ -1,27 +1,267 @@
 <!DOCTYPE html>
 
 <!--
-    =======================================================
+    *******************************************************
     PROYECTO: SERVICIO DE ENVÍOS EXPRESS - DANIEL FLORES E.
-    Archivo ÍNDEX HTML
-    =======================================================
+    ARCHIVO ÍNDEX HTML
+    *******************************************************
 -->
-
 <html lang="es">
 
 <head>
-
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicio Envíos Express</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
-
+<!--
+    =========================================
+    INICIO BODY
+    =========================================
+-->
 <body>
 
-    <h1>Servicio Envíos Express</h1>
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a class="brand" href="#inicio">Servicio Envíos Express</a>
+
+            <!-- Navegación menú principal usando nav-->
+            <nav class="main-nav" aria-label="Navegación principal">
+
+                <!-- Lista de elementos de navegación -->
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a> </li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#envio">Preparar envío</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!--
+        =========================================
+        CONTENIDO PRINCIPAL: Secciones de Inicio, Servicios y Formulario de Envío
+        =========================================
+    -->
+    <main>
+
+        <!--
+            =========================================
+            SECCIÓN DE INICIO
+            =========================================
+        -->
+        <section class="hero" id="inicio">
+
+            <!--Contenedor interno para organizar
+                el contenido de la sección de Inicio.
+            -->
+            <div class="hero-content">
+
+                <h1>Prepara tu envío de forma simple</h1>
+
+                <p>
+                    Ingresa los datos principales de tu encomienda
+                    y conoce qué servicio puede adaptarse mejor
+                    a tu nivel de urgencia.
+                </p>
+
+                <a class="hero-button" href="#envio">Comenzar</a>
+
+            </div>
+
+        </section>
+
+        <!--
+            =========================================
+            SECCIÓN DE SERVICIOS
+            =========================================
+        -->
+        <section class="services" id="servicios">
+
+            <div class="section-header">
+
+                <h2>Elige cómo quieres enviar</h2>
+
+                <p>
+                    Conoce nuestras alternativas de envío
+                    y selecciona la que mejor se adapte
+                    a tus necesidades.
+                </p>
+
+            </div>
+
+            <!-- Contenedor que agrupa los diferentes servicios. -->
+            <div class="services-container">
+                <!-- SERVICIO BÁSICO -->
+                <article class="service-card">
+                    <h3>Básico</h3>
+                    <p>
+                        Una alternativa para envíos que
+                        no requieren entrega inmediata.
+                    </p>
+                    
+                    <ul>
+                        <li>Entrega entre 3 y 5 días hábiles.</li>
+                        <li>Recomendado para urgencia baja.</li>
+                    </ul>
+
+                    <button class="service-button" type="button">
+                        Seleccionar
+                    </button>
+                </article>
+
+                <!-- SERVICIO ESTÁNDAR -->
+                <article class="service-card">
+                    <h3>Estándar</h3>
+                    <p>
+                        Una opción equilibrada entre precio y tiempo de entrega.
+                    </p>
+
+                    <ul>
+                        <li>Entrega entre 2 y 3 días hábiles.</li>
+                        <li>Recomendado para urgencia media.</li>
+                    </ul>
+
+                    <button class="service-button" type="button">
+                        Seleccionar
+                    </button>
+                </article>
+
+                <!-- SERVICIO PRIORITARIO -->
+                <article class="service-card">
+                    <h3>Prioritario</h3>
+                    <p>
+                        La opción más rápida para envíos urgentes.
+                    </p>
+
+                    <ul>
+                        <li>Entrega en 1 día hábil.</li>
+                        <li>Recomendado para urgencia alta.</li>
+                    </ul>
+
+                    <button class="service-button" type="button">
+                        Seleccionar
+                    </button>  
+                </article>
+
+            </div>
+
+        </section>
+
+        <!--
+            =========================================
+            SECCIÓN FORMULARIO DE ENVÍO
+            =========================================
+        -->
+        <section class="shipping-form-section" id="envio">
+            <!-- Contenedor de la sección, información del header del formulario -->
+            <div class="section-header">
+
+                <h2>Prepara tu envío</h2>
+
+                <p>
+                    Completa los siguientes datos para conocer
+                    qué servicio puede adaptarse mejor a tu envío.
+                </p>
+
+            </div>
+
+            <form class="shipping-form" id="shipping-form">
+
+                <div class="form-group">
+                    <label for="origen">Origen</label>
+                    <input type="text" id="origen" name="origen" placeholder="Ej: Santiago" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="destino">Destino</label>
+                    <input type="text" id="destino" name="destino" placeholder="Ej: Valparaíso" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-envio">Tipo de envío</label>
+                    <select id="tipo-envio" name="tipoEnvio" required>
+                        <option value="" selected disabled>Selecciona una opción</option>
+                        <option value="documento">Documento</option>
+                        <option value="paquete">Paquete</option>
+                        <option value="encomienda">Encomienda</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="number" id="peso" name="peso" min="0.1" step="0.1" placeholder="Ej: 2.5" required>
+                </div>
+
+                <div class="dimensions-group">
+
+                    <div class="form-group">
+                        <label for="largo">Largo (cm)</label>
+                        <input type="number" id="largo" name="largo" min="0.1" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ancho">Ancho (cm)</label>
+                        <input type="number" id="ancho" name="ancho" min="0.1" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alto">Alto (cm)</label>
+                        <input type="number" id="alto" name="alto" min="0.1" step="0.1" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="urgencia">Nivel de urgencia</label>
+                    <select id="urgencia" name="urgencia" required>
+                        <option value="" selected disabled>Selecciona el nivel de urgencia</option>
+                        <option value="baja">Baja - Plan Básico (3 y 5 días hábiles)</option>
+                        <option value="media">Media - Plan Estándar (2 y 3 días hábiles)</option>
+                        <option value="alta">Alta - Plan Premium (1 día hábil)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@correo.cl" required>
+                </div>
+
+                <div class="form-actions">
+                    <button class="primary-button" type="submit">Ver recomendación</button>
+                    <button class="secondary-button" type="reset">Limpiar</button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="result-section" id="resultado">
+            <div class="section-header">
+                <h2>Recomendación de envío</h2>
+                <p>Añadir recomendación... Consultar profe</p>
+            </div>
+
+            <div class="result-card" id="result-card">
+                <h3>Servicio recomendado</h3>
+                <p>Completa el formulario para obtener una recomendación.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+    <p>Servicio Envíos Express | Prototipo I</p>
+    </footer>
 
     <script src="js/app.js"></script>
 
