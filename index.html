@@ -116,7 +116,7 @@
                             <li>Recomendado para urgencia baja.</li>
                         </ul>
 
-                        <button class="service-button" type="button">
+                        <button class="service-button" type="button" data-service="basico">
                             Seleccionar
                         </button>
                     </article>
@@ -135,7 +135,7 @@
                             <li>Recomendado para urgencia media.</li>
                         </ul>
 
-                        <button class="service-button" type="button">
+                        <button class="service-button" type="button" data-service="estandar">
                             Seleccionar
                         </button>
                     </article>
@@ -154,7 +154,7 @@
                             <li>Recomendado para urgencia alta.</li>
                         </ul>
 
-                        <button class="service-button" type="button">
+                        <button class="service-button" type="button" data-service="prioritario">
                             Seleccionar
                         </button>  
                     </article>
@@ -241,6 +241,21 @@
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
                     <input type="email" id="email" name="email" placeholder="nombre@correo.cl" required>
+                </div>
+
+                <div class="additional-options">
+
+                    <button class="details-button" id="details-button" type="button">
+                        Ver información adicional
+                    </button>
+
+                    <div class="additional-info" id="additional-info" hidden>
+                        <p>
+                            Los tiempos de entrega son referenciales y pueden variar según
+                            cobertura, destino y condiciones del servicio.
+                        </p>
+                    </div>
+
                 </div>
 
                 <div class="form-actions">

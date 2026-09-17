@@ -446,3 +446,31 @@ select[required] {
     border-top: 6px solid var(--color-amarillo);
     background-color: #fffdf5;
 }
+
+/*Estilos para el botón de detalles para mostrar u ocultar información adicional */
+.additional-options {
+    margin-bottom: 20px;
+}
+
+.details-button {
+    border: 0;
+    background: none;
+    color: var(--color-negro);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.details-button:hover {
+    text-decoration: underline;
+}
+
+.additional-info {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: var(--color-gris-claro);
+    border-left: 4px solid var(--color-amarillo);
+    border-radius: 6px;
+}
+
+
